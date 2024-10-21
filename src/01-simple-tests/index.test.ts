@@ -77,12 +77,19 @@ describe('simpleCalculator tests', () => {
   test('should return null for invalid arguments', () => {
     const firstNumber = "wrong argument";
     const secondNumber = 10;
-    const data = {
+    const dataWithWrongFirst = {
       a: firstNumber,
       b: secondNumber,
       action: Action.Add,
     };
-    const result = simpleCalculator(data);
-    expect(result).toBe(null);
+    const dataWithWrongSecond = {
+      a: secondNumber,
+      b: firstNumber,
+      action: Action.Add,
+    };
+    const resultWithWrongFirst = simpleCalculator(dataWithWrongFirst);
+    const resultWithWrongSecond = simpleCalculator(dataWithWrongSecond);
+    expect(resultWithWrongFirst).toBe(null);
+    expect(resultWithWrongSecond).toBe(null);
   });
 });
