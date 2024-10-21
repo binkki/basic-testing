@@ -1,32 +1,88 @@
 // Uncomment the code below and write your tests
-// import { simpleCalculator, Action } from './index';
+import { simpleCalculator, Action } from './index';
 
 describe('simpleCalculator tests', () => {
   test('should add two numbers', () => {
-    // Write your test here
+    const firstNumber = 5;
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: Action.Add,
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(firstNumber + secondNumber);
   });
 
   test('should subtract two numbers', () => {
-    // Write your test here
+    const firstNumber = 5;
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: Action.Subtract,
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(firstNumber - secondNumber);
   });
 
   test('should multiply two numbers', () => {
-    // Write your test here
+    const firstNumber = 5;
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: Action.Multiply,
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(firstNumber * secondNumber);
   });
 
   test('should divide two numbers', () => {
-    // Write your test here
+    const firstNumber = 5;
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: Action.Divide,
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(firstNumber / secondNumber);
   });
 
   test('should exponentiate two numbers', () => {
-    // Write your test here
+    const firstNumber = 5;
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: Action.Exponentiate,
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(firstNumber ** secondNumber);
   });
 
   test('should return null for invalid action', () => {
-    // Write your test here
+    const firstNumber = 5;
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: "wrong action",
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(null);
   });
 
   test('should return null for invalid arguments', () => {
-    // Write your test here
+    const firstNumber = "wrong argument";
+    const secondNumber = 10;
+    const data = {
+      a: firstNumber,
+      b: secondNumber,
+      action: Action.Add,
+    };
+    const result = simpleCalculator(data);
+    expect(result).toBe(null);
   });
 });
