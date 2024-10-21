@@ -19,7 +19,7 @@ const epectedResult = {
         },
       },
     },
-  }, 
+  },
 };
 
 describe('generateLinkedList', () => {

@@ -5,10 +5,10 @@ import { throttledGetDataFromApi } from './index';
 const baseURL = 'https://jsonplaceholder.typicode.com';
 const endpoint = '/todos/1';
 const endpointData = {
-  "userId": 1,
-  "id": 1,
-  "title": "delectus aut autem",
-  "completed": false,
+  userId: 1,
+  id: 1,
+  title: 'delectus aut autem',
+  completed: false,
 };
 
 describe('throttledGetDataFromApi', () => {

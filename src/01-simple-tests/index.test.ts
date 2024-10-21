@@ -68,14 +68,14 @@ describe('simpleCalculator tests', () => {
     const data = {
       a: firstNumber,
       b: secondNumber,
-      action: "wrong action",
+      action: 'wrong action',
     };
     const result = simpleCalculator(data);
     expect(result).toBe(null);
   });
 
   test('should return null for invalid arguments', () => {
-    const firstNumber = "wrong argument";
+    const firstNumber = 'wrong argument';
     const secondNumber = 10;
     const dataWithWrongFirst = {
       a: firstNumber,

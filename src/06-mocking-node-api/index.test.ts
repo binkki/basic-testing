@@ -5,8 +5,8 @@ import { readFileAsynchronously, doStuffByTimeout, doStuffByInterval } from '.';
 
 const callback = jest.fn();
 const timeout = 1000;
-const pathToFile = "some path to file";
-const fileContent = "file content";
+const pathToFile = 'some path to file';
+const fileContent = 'file content';
 
 describe('doStuffByTimeout', () => {
   beforeAll(() => {
